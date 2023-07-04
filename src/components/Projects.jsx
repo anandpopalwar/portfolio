@@ -5,12 +5,23 @@ import Dice from '../project Images/dice game.png'
 import Todo from '../project Images/Todo.png'
 import Geo from '../project Images/geolocation api.png'
 import Quote from '../project Images/quote.png'
+import Clone from '../project Images/clone-tube.png'
+
 
 
 
 
 let array =
  [
+  {
+    id:'7',
+    project_name:'Clone-tube ',
+    link:'https://clone-tube-anand.vercel.app/',
+    github:'https://github.com/anandpopalwar/clone-tube-anand.git',
+    image:Clone,
+    flex:true    ,
+    disc:'Clone-tube is created by me using YOUTUBES OFFICIAL API and tech stack used is React js , React Redux , React Route and Youtube Api ',
+  },
   {
     id:'5',
     project_name:'Random Quote Generator',
