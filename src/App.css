@@ -1,39 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-.home{
- 
-  display: grid ; 
+.home {
+  display: grid;
   background-color: rgb(223, 255, 255);
- 
-  
-  background-color:hsla(358,72%,56%,1);
-background-image:
-radial-gradient(at 62% 45%, hsla(239,81%,79%,1) 0px, transparent 50%),
-radial-gradient(at 75% 33%, hsla(343,100%,50%,1) 0px, transparent 50%),
-radial-gradient(at 81% 77%, hsla(295,98%,60%,1) 0px, transparent 50%),
-radial-gradient(at 16% 25%, hsla(337,78%,76%,1) 0px, transparent 50%),
-radial-gradient(at 78% 63%, hsla(286,92%,69%,1) 0px, transparent 50%),
-radial-gradient(at 60% 76%, hsla(310,76%,60%,1) 0px, transparent 50%),
-radial-gradient(at 43% 35%, hsla(266,72%,72%,1) 0px, transparent 50%);
+
+  background-color: hsla(358, 72%, 56%, 1);
+  background-image: radial-gradient(
+      at 62% 45%,
+      hsla(239, 81%, 79%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 75% 33%, hsla(343, 100%, 50%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 77%, hsla(295, 98%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 16% 25%, hsla(337, 78%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 78% 63%, hsla(286, 92%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 60% 76%, hsla(310, 76%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 43% 35%, hsla(266, 72%, 72%, 1) 0px, transparent 50%);
 }
-.homeleft{
-  
+.homeleft {
   align-self: center;
 }
 
-.skills{
-  background-color:hsla(0,78%,54%,1);
-background-image:
-radial-gradient(at 100% 100%, rgb(234, 114, 114) 0px, transparent 50%),
-radial-gradient(at 0% 0%, hsla(338,100%,75%,1) 0px, transparent 50%),
-radial-gradient(at 0% 100%, hsla(305,82%,79%,1) 0px, transparent 50%),
-radial-gradient(at 100% 0%, hsla(298,87%,76%,1) 0px, transparent 50%);
+.skills {
+  background-color: hsla(0, 78%, 54%, 1);
+  background-image: radial-gradient(
+      at 100% 100%,
+      rgb(234, 114, 114) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 0%, hsla(338, 100%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(305, 82%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(298, 87%, 76%, 1) 0px, transparent 50%);
 }
- 
- 
