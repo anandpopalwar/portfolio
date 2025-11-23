@@ -12,14 +12,12 @@ const ContectPage = () => {
   const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
-  // console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
-
   function sendMail(e) {
     e.preventDefault();
 
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       // show friendly UI error instead of crashing
-
+      console.error("EmailJS environment variables are not set.");
       return;
     }
 
