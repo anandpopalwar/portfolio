@@ -2,8 +2,6 @@ import React from "react";
 import GITHUB from "../images/github.png";
 
 const ProjectCompo = ({ data }) => {
-  console.log(data.id);
-
   return data.flex ? (
     <div className="sm:flex  flex-row-reverse gap-10 border-b-2  p-4 sm:p-4 md:p-8 lg:p-12  border-stone-200 ">
       <div className="sm:w-1/2 items-center justify-center  my-auto ">

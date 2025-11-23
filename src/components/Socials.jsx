@@ -5,7 +5,7 @@ import Linkedin from "../images/linkedin.png";
 
 const Socials = () => {
   return (
-    <div className="text-white container min-h-80   w-full m-auto rounded-3xl  p-4 sm:p-4   gap-10 lg:w-1/3">
+    <div className="text-white container min-h-80   w-full m-auto rounded-3xl  pt-4 sm:pt-4   gap-10 lg:w-1/3 pb-24 mb-30">
       <div className=" flex  gap-10 justify-center">
         <a
           href="https://github.com/anandpopalwar"

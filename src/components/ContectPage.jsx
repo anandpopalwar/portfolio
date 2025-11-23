@@ -1,59 +1,49 @@
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const ContectPage = () => {
   const form = useRef();
 
-  // const user_name = useRef();
-
-  // const user_email = useRef()
-
-  // const user_msg = useRef();
-
-  // const submitValue = useRef()
-
-  // console.log(user_email?.current?.value)
-
-  // console.log(user_email.current.value)
-  // console.log(user_msg.current.value)
-
   const [submitHandler, setSubmitHandler] = useState(false);
 
-  // const service_id=process.env.REACT_APP_YOUR_SERVICE_ID
-  // const template_id=process.env.REACT_APP_YOUR_TEMPLATE_ID
-  // const public_key=process.env.REACT_APP_YOUR_PUBLIC_KEY
+  const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
-  // console.log(service_id
-  //   , template_id
-  //   , public_key
-  // )
+  // console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
 
-  const sendEmail = (e) => {
+  function sendMail(e) {
     e.preventDefault();
 
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      // show friendly UI error instead of crashing
+
+      return;
+    }
+
     emailjs
-      .sendForm(
-        "service_xqk4kp9",
-        "template_af68img",
-        form.current,
-        "hquoay_YGqlLOI6h0"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSubmitHandler(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then(() => {
+        alert("Sent!");
+        setSubmitHandler(true);
+
+        setTimeout(() => {
+          setSubmitHandler(false);
+        }, 4000);
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Failed to send — try again later.");
+      });
+  }
+
   //  ref={user_name} ref={user_email}ref={user_msg}
   return (
     <form
       ref={form}
-      onSubmit={sendEmail}
+      onSubmit={sendMail}
       id="contact"
       className=" bg-stone-200 bg-opacity-50 rounded-3xl py-8  container min-h-80   w-full m-auto    p-4 sm:p-4 md:p-8 lg:p-12  "
     >
