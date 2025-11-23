@@ -4,6 +4,7 @@ import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const ContectPage = () => {
+  console.log("updated");
   const form = useRef();
 
   const [submitHandler, setSubmitHandler] = useState(false);
