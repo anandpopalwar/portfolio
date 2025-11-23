@@ -14,6 +14,7 @@ const ContectPage = () => {
 
   function sendMail(e) {
     e.preventDefault();
+    console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
 
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       // show friendly UI error instead of crashing
@@ -29,6 +30,7 @@ const ContectPage = () => {
 
         setTimeout(() => {
           setSubmitHandler(false);
+          form.current.reset();
         }, 4000);
       })
       .catch((err) => {
